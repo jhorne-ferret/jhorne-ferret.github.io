@@ -1,0 +1,218 @@
+/* styles.css */
+
+/* Reset some default browser styles */
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Basic styling for the body */
+body {
+    font-family: futura;
+    font-style: normal;
+    font-size: 18px; /* Adjust the value as needed */
+    text-align: left;
+    color: #673a1b; 
+    background-color: #f4f4f4;
+    line-height: 1.6;
+    padding: 50px;
+}
+
+header {
+    background: #673a1b;
+    color: #fff;
+    padding: 0px 0; /* Decrease the vertical padding */
+    font-family: futura;
+    font-style: normal;
+    font-size: 24px; /* Adjust the value as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    line-height: 1.0;
+}
+
+
+.header-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+.header-image {
+    margin: 0;
+    max-width: 50px; /* Adjust the value as needed to make the image smaller */
+    height: auto; /* Maintain aspect ratio */
+    position: absolute;
+    left: 10px; /* Adjust the value as needed */
+}
+
+.header-title {
+    padding: 0px 0; /* Decrease the vertical padding */
+    margin: 0;
+    text-align: center; /* Center align the text */
+    flex: 1; /* Allow the text to take up remaining space */
+    font-variant: small-caps; /* Convert text to small caps */
+}
+
+nav {
+    margin: 0px 0;
+    background: #fff;
+    color: #000;
+    padding: 5px;
+    text-align: end;
+}
+
+nav ul {
+    display: flex;
+    justify-content: right;
+}
+
+nav ul li {
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color: #000000;
+    text-decoration: none;
+}
+
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+
+/* Main content styling */
+main {
+    background: #fff;
+    padding: 10px;
+    border-radius: 2px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+h2 {
+    margin-bottom: 5px;
+}
+
+/* Footer styling */
+footer {
+    font-family: futura;
+    font-style: italic;
+    font-size: 16px; 
+    margin-top: 5px;
+    margin-top: 5px;
+    padding: 5px 0;
+    background: #fff;
+    color: #673a1b;
+    text-align: right;
+    padding: 10px;
+}
+
+/* Italic styling using futura font */
+.italic-futura-left {
+    font-family: futura;
+    font-style: italic;
+    font-size: 20px; /* Adjust the value as needed */
+    text-align: left;
+    color: #673a1b; 
+}
+.italic-futura-right {
+    font-family: futura;
+    font-style: italic;
+    font-size: 20px; /* Adjust the value as needed */
+    text-align: right;
+    color: #673a1b; 
+}
+
+.futura-left {
+    font-family: futura;
+    font-style: normal;
+    font-size: 20px; /* Adjust the value as needed */
+    text-align: left;
+    color: #673a1b; 
+}
+
+.image-container {
+    display: flex;
+    flex: 1; /* Adjust as needed */
+    justify-content: left;
+    align-items: left;
+    width: auto;
+    height: auto;
+}
+
+.image-container img {
+    max-width: 100%; /* Ensures the image does not exceed the container's width */
+    height: auto; /* Maintains the aspect ratio */
+    max-height: 500px; /* Adjust the value as needed to make the image smaller */
+}
+
+.content-container {
+    display: flex;
+    align-items: flex-start; /* Align items to the top */
+    gap: 20px; /* Space between the image and the form */
+}
+
+.form-container {
+    flex: 1; /* Adjust as needed */
+    margin-top: 20px; /* Adjust the value as needed */
+}
+
+.image-container img {
+    max-width: 100%; /* Ensures the image does not exceed the container's width */
+    height: auto; /* Maintains the aspect ratio */
+    max-height: 600px; /* Adjust the value as needed to make the image smaller */
+}
+
+label {
+    padding: 5 px;
+    font-family: futura;
+    font-style: normal;
+    font-size: 16px; /* Adjust the value as needed */
+    color: #673a1b; 
+}
+
+.indented-form {
+    margin-top: 20px; /* Adjust the value as needed */
+    margin-left: 0px; /* Adjust the value as needed */
+}
+
+.form-input {
+    width: 90%; /* Adjust the value as needed */
+    padding: 10px; /* Optional: Add padding for better appearance */
+    font-size: 16px; /* Optional: Increase font size for better readability */
+    vertical-align: top; /* Ensure text starts at the top */
+    border: 1px solid #673a1b; /* Darker border color */
+}
+
+.large-input {
+    width: 90%; /* Adjust the value as needed */
+    padding: 10px; /* Optional: Add padding for better appearance */
+    font-size: 16px; /* Optional: Increase font size for better readability */
+    text-align: left; /* Ensure text starts at the left */
+    vertical-align: top; /* Ensure text starts at the top */
+    resize: vertical; /* Optional: Allow vertical resizing */
+    border: 1px solid #673a1b; /* Darker border color */
+}
+
+.styled-button {
+    font-size: 16px; /* Adjust the value as needed to increase text size */
+    color: #fff; /* Same color as the body text */
+    padding: 10px 20px; /* Optional: Add padding for better appearance */
+    background-color: #673a1b; /* Optional: Background color */
+    border: 1px solid #000; /* Optional: Border style */
+    border-radius: 5px; /* Optional: Rounded corners */
+    cursor: pointer; /* Optional: Pointer cursor on hover */
+    margin-top: 20px; /* Add space between button and form elements above */
+}
+
+.styled-button:hover {
+    background-color: #f0f0f0; /* Optional: Change background color on hover */
+}

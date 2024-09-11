@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<header>
+		<div class="header-content">
+			<!-- <img src="spectrum_ferret1.png" alt="Header Image" class="header-image"> -->
+			<h1 class="header-title">Spectrum Ferret</h1>
+		</div>
+	</header>
+	<!-- <nav>
+		<ul>
+			<li><a href="#home">Login</a></li>
+		</ul>
+	</nav> -->
+	<main>
+		<div class="content-container">
+			<div class="image-container">
+				<img src="ferrets_designing.jpg" alt="Ferrets hard at work" class="image">
+			</div>
+			<div class="form-container">
+				<p>
+					The ferrets are hard at work modernizing two-way radio communications.
+					Sign up here to receive updates on their progress and get early access to the beta.
+				</p>
+				<form id="my-form" action="https://formspree.io/f/mwpejpdb" method="POST" class="indented-form">
+					<label>Your Email:</label>
+					<p></p>
+					<input type="email" name="email" class="form-input" />
+					<p></p>
+					<label>Comments:</label>
+					<p></p>
+					<textarea name="message" class="large-input" rows="4"></textarea>
+					<p></p>
+					<button id="my-form-button" class="styled-button">Submit</button>
+					<p id="my-form-status"></p>
+				</form>
+			</div>
+		</div>
+	</main>
+	<footer>
+		<p>&copy; 2024 Spectrum Ferret LLC</p>
+	</footer>
+	<script src="scripts.js"></script>
+</body>
+
+<!-- Place this script at the end of the body tag -->
+<script>
+  var form = document.getElementById("my-form");
+  
+  async function handleSubmit(event) {
+    event.preventDefault();
+    var status = document.getElementById("my-form-status");
+    var data = new FormData(event.target);
+    fetch(event.target.action, {
+      method: form.method,
+      body: data,
+      headers: {
+          'Accept': 'application/json'
+      }
+    }).then(response => {
+      if (response.ok) {
+        status.innerHTML = "Thanks for signing up. We'll be in touch!";
+        form.reset()
+      } else {
+        response.json().then(data => {
+          if (Object.hasOwn(data, 'errors')) {
+            status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+          } else {
+            status.innerHTML = "Oops! There was a problem submitting your form"
+          }
+        })
+      }
+    }).catch(error => {
+      status.innerHTML = "Oops! There was a problem submitting your form"
+    });
+  }
+  form.addEventListener("submit", handleSubmit)
+</script>
+
+
+</html>
