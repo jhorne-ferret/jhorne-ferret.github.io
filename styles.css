@@ -185,7 +185,7 @@ label {
 }
 
 .form-input {
-    width: 90%; /* Adjust the value as needed */
+    width: 93%; /* Adjust the value as needed */
     padding: 10px; /* Optional: Add padding for better appearance */
     font-size: 16px; /* Optional: Increase font size for better readability */
     vertical-align: top; /* Ensure text starts at the top */
@@ -193,7 +193,7 @@ label {
 }
 
 .large-input {
-    width: 90%; /* Adjust the value as needed */
+    width: 93%; /* Adjust the value as needed */
     padding: 10px; /* Optional: Add padding for better appearance */
     font-size: 16px; /* Optional: Increase font size for better readability */
     text-align: left; /* Ensure text starts at the left */
